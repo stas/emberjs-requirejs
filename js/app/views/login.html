@@ -1,0 +1,31 @@
+<div class="page-header">
+  <h3>Login Panel
+    <small>Version: {{App.VERSION}}</small>
+  </h3>
+</div>
+{{#if App.API.isLoggedIn}}
+  {{#view Em.Button
+    class="btn btn-primary"
+    target="App.Controllers.Login"
+    action="deauthenticate"}}
+    Logout
+  {{/view}}
+{{else}}
+<form class="form-inline">
+  <input type="text" class="input-medium" id="login-username" placeholder="Username">
+  <input type="password" class="input-medium" id="login-password" placeholder="Password">
+  {{#view Em.Button
+    class="btn btn-primary"
+    target="App.Controllers.Login"
+    action="authenticate"}}
+    Login
+  {{/view}}
+</form>
+{{/if}}
+
+{{#view Em.Button
+  class="btn btn-danger"
+  target="App.Controllers.Login.view"
+  action="rerender"}}
+  Render Again
+{{/view}}

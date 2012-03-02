@@ -1,0 +1,18 @@
+/* Fix buggish bootstrap */
+@media screen and (min-width: 980px) {
+body {
+    padding-top: 60px;
+    }
+}
+
+/* Limit margins to get more space for content */
+.container, footer {
+    margin-left: 1%;
+    margin-right: 1%;
+    width: auto;
+}
+
+/* Make sure we see footer always */
+footer {
+    min-height: 40px;
+}
