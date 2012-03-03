@@ -1,6 +1,6 @@
 // Define libraries
 require.config({
-    baseUrl: '/js/',
+    baseUrl: 'js/',
     paths: {
         jquery: 'libs/jquery-1.7.1.min',
         ember: 'libs/ember-0.9.5.min',
