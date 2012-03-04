@@ -13,6 +13,6 @@ define('app/models/api', ['ember'], function(){
          */
         isLoggedIn: function() {
           return this.get('sessionId') !== null ? true : false;
-        }.property()
+        }.property('sessionId')
     });
 });
